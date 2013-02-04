@@ -25,6 +25,17 @@ Git とは
 
 バージョン番号が 1.6.5.3 より以前の場合は、最寄りのエンジニアを呼んでバージョンを上げてもらって下さい。便利な機能が使えるようになります。
 
+### ユーザー名とメールアドレスを設定する
+
+ユーザー名とメールアドレスを設定します。 (これは表示のためのもので、自由な値を設定して構いません。)
+
+```git config --global``` を使用して設定を行うことで、設定値がユーザーのホームディレクトリの
+~/.gitconfig ファイルに書き込まれます。
+(see: [git-config(1) Manual Page](http://www.kernel.org/pub/software/scm/git/docs/git-config.html))
+
+	git config --global user.name "Hatena Tarou"
+	git config --global user.email "gituser@example.com"
+
 ### 便利な設定をしておく
 
 以下をコピペして PuTTY などの画面に流してください。Git 生活を快適にします。
