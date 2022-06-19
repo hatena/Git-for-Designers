@@ -379,5 +379,9 @@ theme ブランチに行うべき変更を master ブランチにコミットし
 	templates/campaign.html:            [% #TODO このテーマを使うボタンが動かない %]
 
 ### あのときのファイルの内容に戻したい
+`git checkout リビジョン -- ファイル名` を実行すると指定のコミット時点でのファイルだけ戻すことができます。
+`git log --stat` や `tig` などで該当のコミットのrevision ( `2444d62e7330ec65439e40c8ab88beab18ab09cd` みたいな文字列) を見つけてそれを指定します。以下の例では `README.md` というファイルをこの時点のものに戻しています。
 
-TBD git checkout $revision -- $file
+	% git checkout 2444d62e7330ec65439e40c8ab88beab18ab09cd README.md
+
+上記で問題なければあとはいつものように `git add` `git commit` します。
